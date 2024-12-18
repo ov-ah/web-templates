@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="h-container">
+        <h1>ovah's testing board</h1>
+        <h2>Welcome to ovah's testing board! This is mostly for personal use but feel free to use any of the templates here.</h2>
+    </div>
+
+    <div class="content-main">
+        <div class="warning">
+            This is an example of a very important warning!
+        </div>
+
+        <div class="tooltip">
+            This is an example of a somewhat important tooltip!
+        </div>
+
+        <div class="text-main">
+            <p>This is just some normal text that uses spans for fancy <span style="color:aqua">highlighting</span>.</p>
+        </div>
+
+        <div class="subtext-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="52px">
+                <!-- Text to be footnoted -->
+                <text id="main-text" x="0" y="20" class="svg-text-main">Text to be footnoted</text>
+              
+                <!-- Vertical line, positioned based on text width -->
+                <line id="vertical-line" stroke="white" stroke-width="1" />
+              
+                <!-- Horizontal line -->
+                <line id="horizontal-line" stroke="white" stroke-width="1" />
+              
+                <!-- Footnote text -->
+                <text id="footnote-text" class="svg-text-sub">footnote text (1 line limit for now)</text>
+            </svg>              
+        </div>    
+
+        <div class="text-main">
+            <p>This is standard text that is long enough to wrap to a second line, this also helps find how much spacing/padding/margin we need. This is standard text that is long enough to wrap to a second line, this also helps find how much spacing/padding/margin we need.</p>
+        </div>  
+
+        <div class="textbox-main">
+            <p>
+                This text has been locked inside of a box and can't figure out how it's going to escape!
+            </p>
+        </div>       
+    </div>
+
+    <script>
+        // Get the main text and SVG elements
+        const mainText = document.getElementById('main-text');
+        const verticalLine = document.getElementById('vertical-line');
+        const horizontalLine = document.getElementById('horizontal-line');
+        const footnoteText = document.getElementById('footnote-text');
+        
+        window.onload = function() {
+            // Get the width of the main text
+            const textWidth = mainText.getBBox().width;
+            
+            // Calculate the center of the main text
+            const textCenterX = textWidth / 2;
+            
+            // Adjust the vertical line to the center of the main text
+            verticalLine.setAttribute('x1', textCenterX);
+            verticalLine.setAttribute('x2', textCenterX);
+            verticalLine.setAttribute('y1', 28);
+            verticalLine.setAttribute('y2', 48);
+            
+            // Adjust the horizontal line, it will be at the bottom of the vertical line
+            horizontalLine.setAttribute('x1', textCenterX);
+            horizontalLine.setAttribute('x2', textCenterX + 25);  // extending to the right
+            horizontalLine.setAttribute('y1', 48);
+            horizontalLine.setAttribute('y2', 48);
+            
+            // Adjust the footnote text to align with the center of the main text
+            footnoteText.setAttribute('x', textCenterX + 30);
+            footnoteText.setAttribute('y', 52);
+        };
+    </script>
+</body>
+</html>

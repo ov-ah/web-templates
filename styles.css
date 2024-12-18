@@ -1,0 +1,103 @@
+:root {
+    --bg-main: #000;
+    --bg-alt: #ff0000;
+    --color-main: #fff;
+    --color-alt: #acacac;
+    --max-width: 800px
+}
+
+@font-face {
+    font-family: 'heading';
+    src:url('res/fonts/heading.ttf');
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--color-main);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+.content-main {
+    width: 100%;
+    max-width: var(--max-width);
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    padding: 40px;
+}
+
+.content-main > div {
+    margin-top: 25px;
+}
+
+.warning {
+    background: rgba(255, 0, 0, 0.25);
+    border-left: 5px solid red;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+
+.warning::before {
+    content: 'WARNING: ';
+    color: red;
+    font-weight: bold;
+}
+
+.tooltip {
+    background: rgba(255, 255, 0, 0.25);
+    border-left: 5px solid yellow;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+
+.tooltip::before {
+    content: 'TOOLTIP: ';
+    color: yellow;
+    font-weight: bold;
+}
+
+.text-main {
+    width: 100%;
+}
+
+.textbox-main {
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%; 
+    max-width: calc( var(--max-width) - 24px - 5% ); 
+    margin: auto;
+}
+
+.svg-text-main {
+    fill: var(--color-main);
+}
+
+.svg-text-sub {
+    fill: var(--color-alt);
+    font-style: italic;
+    font-size: 12px;
+}
+
+.h-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    font-family: 'heading';
+}
+
+.h-container h1 {
+    font-size: 37px;
+}
+
+.h-container h2 {
+    font-size: 16px;
+    color: var(--color-alt);
+}
