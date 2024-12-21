@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?version=2">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,20 +26,8 @@
             <p>This is just some normal text that uses spans for fancy <span style="color:aqua">highlighting</span>.</p>
         </div>
 
-        <div class="subtext-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="52px">
-                <!-- Text to be footnoted -->
-                <text id="main-text" x="0" y="20" class="svg-text-main">Text to be footnoted</text>
-              
-                <!-- Vertical line, positioned based on text width -->
-                <line id="vertical-line" stroke="white" stroke-width="1" />
-              
-                <!-- Horizontal line -->
-                <line id="horizontal-line" stroke="white" stroke-width="1" />
-              
-                <!-- Footnote text -->
-                <text id="footnote-text" class="svg-text-sub">footnote text (1 line limit for now)</text>
-            </svg>              
+        <div class="subtext">
+            This is some subtext! 
         </div>    
 
         <div class="text-main">
@@ -50,7 +38,32 @@
             <p>
                 This text has been locked inside of a box and can't figure out how it's going to escape!
             </p>
-        </div>       
+        </div>   
+        
+        <div class="ordered-list">
+            <ol>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin blandit id nunc id lacinia. Cras fringilla convallis massa quis tristique. Maecenas faucibus odio dui, a imperdiet ex ullamcorper vel. Vivamus ornare est non dictum accumsan. Mauris ultrices sodales dictum. Nunc ullamcorper risus justo. Nunc interdum eu sapien sed convallis. 
+                    <div class="warning">
+                        This is an example of a very important warning!
+                    </div>
+                </li>
+                <li>
+                    Praesent augue orci, lobortis at elementum in, fermentum vel arcu. Aliquam nec ex non eros hendrerit rutrum nec at libero. Ut lacinia ligula arcu, et malesuada arcu tempor nec. Curabitur quis gravida felis, eu auctor augue. Suspendisse diam lorem, tincidunt eget auctor vel, consectetur id arcu. Nam et ex ut sem dapibus commodo. Nunc molestie elit dictum ante imperdiet, at dictum orci cursus. Aliquam erat volutpat. Suspendisse consequat consectetur eleifend. Suspendisse potenti. Proin consectetur interdum lacus, id sodales augue gravida et. Vestibulum pulvinar id nisl eget vehicula. Aenean pellentesque mollis placerat. Suspendisse congue urna magna, interdum sagittis mauris gravida eget. Etiam ultrices molestie dolor a pharetra. Donec tristique dictum quam ut cursus. 
+                </li>
+                <li>
+                    Aenean eget urna tellus. Maecenas euismod hendrerit nisl nec dignissim. Donec et mollis orci, vel porta nunc. In leo magna, finibus id nisl in, tristique lobortis neque. Etiam facilisis, enim eu lobortis porta, eros purus consectetur erat, vitae tempor quam magna ac sem. Morbi ac velit pretium, auctor elit eu, accumsan felis. Proin consequat nibh hendrerit turpis blandit pellentesque. 
+                </li>
+                <li>
+                    Donec ornare est nec leo dictum, vel viverra purus maximus. Nullam scelerisque laoreet pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut sed efficitur neque, vel pharetra lacus. In hac habitasse platea dictumst. Nam vel tortor in lectus ullamcorper elementum. Nulla facilisi. Pellentesque feugiat luctus maximus. Proin sed vulputate sem. Vestibulum maximus nunc et urna mattis, eu ultrices leo tristique. Vestibulum dolor neque, semper at consectetur quis, rutrum ut augue. Cras pellentesque est tempor dolor faucibus, a imperdiet turpis congue. Mauris a commodo mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam mollis ligula et maximus placerat. Quisque a risus ut diam convallis semper. 
+                    <div class="textbox-main">
+                        <p>
+                            Curabitur scelerisque ante sit amet massa cursus, vel accumsan purus placerat. Etiam orci quam, mattis et pellentesque ut, egestas eu sapien. Pellentesque a iaculis risus, quis ullamcorper justo. Praesent lacinia sollicitudin orci et blandit. Pellentesque sed lacus facilisis, porttitor turpis quis, eleifend sem. Phasellus malesuada, diam ut auctor dignissim, lectus velit aliquam enim, a tincidunt est nibh vel ligula. Vestibulum non sapien nec erat accumsan consequat ut quis nisi. 
+                        </p>
+                    </div>   
+                </li>
+            </ol>
+        </div>
     </div>
 
     <script>

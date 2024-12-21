@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text with Subtext Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .main-text {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .subtext {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .subtext::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            margin-right: 10px;
+        }
+        .subtext-text {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="main-text">Main Text</div>
+        <div class="subtext">
+            <span class="subtext-text">Sub Text</span>
+        </div>
+    </div>
+</body>
+</html>
